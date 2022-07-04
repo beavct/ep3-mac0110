@@ -38,14 +38,14 @@ int main () {
         }
         if (escolha == 'M' || escolha == 'm') {
             if (E == NULL) {
-                printf ("Nao ha imagem-entrada alocada");
+                printf ("Nao ha imagem-entrada alocada\n");
             }
             if (T != NULL) {
                 free (T); T = NULL;
             }
         }
         if (escolha == 'S' || escolha == 's') {
-            if (E == NULL && T == NULL) printf ("Nao ha imagem de entrada");      
+            if (E == NULL && T == NULL) printf ("Nao ha imagem de entrada alocada\n");      
             if (E != NULL && T == NULL) {
                 save_image_to_file (filename, E, largura, altura);
             }
@@ -63,7 +63,7 @@ int main () {
             }
         }
         if (escolha == 'C' || escolha == 'c') {
-            if (E == NULL && T ==  NULL) printf ("Nao ha imagem de entrada alocada");
+            if (E == NULL && T ==  NULL) printf ("Nao ha imagem de entrada alocada\n");
             if (E != NULL && T == NULL) {
 
             }
@@ -75,7 +75,7 @@ int main () {
         }
         if (escolha == 'F' || escolha == 'f') {
             if (E == NULL && T ==  NULL) {
-                printf ("Nao ha imagem de entrada alocada");
+                printf ("Nao ha imagem de entrada alocada\n");
                 return 0; 
             }
             printf ("Digite o tipo do filtro:\n");
@@ -98,7 +98,7 @@ int main () {
             }
         }
         if (escolha == 'R' || escolha == 'r') {
-            if (E == NULL && T ==  NULL) printf ("Nao ha imagem de entrada alocada");
+            if (E == NULL && T ==  NULL) printf ("Nao ha imagem de entrada alocada\n");
             if (E != NULL && T == NULL) label_components (E, largura, altura, &ncomponentes);
             if (E != NULL && T != NULL) {
                 E = T;
